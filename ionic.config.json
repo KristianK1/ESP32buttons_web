@@ -1,0 +1,7 @@
+{
+  "name": "webSocketFrontEndProba",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
