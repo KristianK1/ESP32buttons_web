@@ -78,7 +78,6 @@ export class HomePage {
   }
 
   handleConnected(data) {
-    HomePage.behSub.next(2);
     var logMsg = 'Connected to server: ' + data.target.url;
     console.log(logMsg);
     setInterval(() => {
