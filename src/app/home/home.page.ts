@@ -23,9 +23,6 @@ export class HomePage {
   lastTimeStamp: number = 0;
 
   connect() {
-    let date = new Date();
-    console.log(date.valueOf());
-
     var SERVER_URL = 'wss://ws-tutorial-sviki.herokuapp.com';
     // This is a variable for our WebSocket.
     var ws;
