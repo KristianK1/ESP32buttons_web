@@ -41,39 +41,27 @@ export class HomePage {
 
   handleMessageReceived(data) {
     // Simply call logMessage(), passing the received data.
-    console.log(data.data);
     let str: string = data.data;
     let date = new Date();
 
     if (str.includes("Recived: DA")) {
       console.log("data: Da");
-
-   
       HomePage.behSub.next(1);
-
       this.lastTimeStamp = date.valueOf();
     }
-
-
-
     else if (str.includes("Recived: NE")) {
       console.log("data: Ne");
-
-      
-    HomePage.behSub.next(2);
-
+      HomePage.behSub.next(2);
       this.lastTimeStamp = date.valueOf();
     }
-
-
-
-    else if (data.data) {
+    else if (str.includes("Recived: PONOVI")) {
       console.log(str.includes("Recived: PONOVI"));
-
       HomePage.behSub.next(3);
-
       this.lastTimeStamp = date.valueOf();
-
+    }
+    else if (str.includes("abcde")) {
+      HomePage.behSub.next(4);
+      this.lastTimeStamp = date.valueOf();
     }
   }
 
@@ -121,7 +109,11 @@ export class HomePage {
     }
     if (rez == 3) {
       this.colorVar3 = "#0000FF";
-
+    }
+    if (rez == 4) {
+      this.colorVar1 = "#FFFF00";
+      this.colorVar2 = "#FFFF00";
+      this.colorVar3 = "#FFFF00";
     }
   }
 
